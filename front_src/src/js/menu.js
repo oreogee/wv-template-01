@@ -1,9 +1,8 @@
-
 var windowWidth = $(window).width();
 var viewMode = (windowWidth>768) ? 'desktop':'mobile';
 console.log("viewMode = "+viewMode);
-$(document).ready(function() {
 
+$(document).ready(function() {
     if(viewMode == "desktop") {
         $('.gnb-list-item.expanded').hover(
             function() {
@@ -33,6 +32,7 @@ $(document).ready(function() {
             }
         });
     }
+
      $('#mobile-menu').click(function(){
         var $menuIcon = $(this);
         if($menuIcon.hasClass('open')){

@@ -137,6 +137,102 @@ hr {
   content: "\ea96";
 }
 
+/* jssor slider bullet navigator skin 05 css */
+/*
+.jssorb05 div           (normal)
+.jssorb05 div:hover     (normal mouseover)
+.jssorb05 .av           (active)
+.jssorb05 .av:hover     (active mouseover)
+.jssorb05 .dn           (mousedown)
+*/
+.jssorb05 {
+  position: absolute;
+}
+
+.jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+  position: absolute;
+  /* size of bullet elment */
+  width: 16px;
+  height: 16px;
+  background: url("../img/b05.png") no-repeat;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.jssorb05 div {
+  background-position: -7px -7px;
+}
+
+.jssorb05 div:hover, .jssorb05 .av:hover {
+  background-position: -37px -7px;
+}
+
+.jssorb05 .av {
+  background-position: -67px -7px;
+}
+
+.jssorb05 .dn, .jssorb05 .dn:hover {
+  background-position: -97px -7px;
+}
+
+/* jssor slider arrow navigator skin 22 css */
+/*
+.jssora22l                  (normal)
+.jssora22r                  (normal)
+.jssora22l:hover            (normal mouseover)
+.jssora22r:hover            (normal mouseover)
+.jssora22l.jssora22ldn      (mousedown)
+.jssora22r.jssora22rdn      (mousedown)
+.jssora22l.jssora22lds      (disabled)
+.jssora22r.jssora22rds      (disabled)
+*/
+.jssora22l, .jssora22r {
+  display: block;
+  position: absolute;
+  /* size of arrow element */
+  width: 40px;
+  height: 58px;
+  cursor: pointer;
+  background: url("../img/a22.png") center center no-repeat;
+  overflow: hidden;
+}
+
+.jssora22l {
+  background-position: -10px -31px;
+}
+
+.jssora22r {
+  background-position: -70px -31px;
+}
+
+.jssora22l:hover {
+  background-position: -130px -31px;
+}
+
+.jssora22r:hover {
+  background-position: -190px -31px;
+}
+
+.jssora22l.jssora22ldn {
+  background-position: -250px -31px;
+}
+
+.jssora22r.jssora22rdn {
+  background-position: -310px -31px;
+}
+
+.jssora22l.jssora22lds {
+  background-position: -10px -31px;
+  opacity: .3;
+  pointer-events: none;
+}
+
+.jssora22r.jssora22rds {
+  background-position: -70px -31px;
+  opacity: .3;
+  pointer-events: none;
+}
+
 /* Common */
 .blind {
   position: absolute;
@@ -169,6 +265,11 @@ h1 {
   height: 50px;
   margin: 5px 10px;
   line-height: 60px;
+}
+
+h2 {
+  text-align: center;
+  padding: 50px 0 30px;
 }
 
 section {
@@ -208,6 +309,11 @@ header {
   font-size: 15px;
   line-height: 20px;
   color: #848b90;
+  cursor: pointer;
+}
+
+.gnb-list-item:hover {
+  color: #51575d;
   -webkit-transition: color 1.5s;
   transition: color 1.5s;
 }
@@ -218,7 +324,6 @@ header {
 
 .gnb-list-item a:hover {
   color: #51575d;
-  cursor: pointer;
   -webkit-transition: color 1.5s;
   transition: color 1.5s;
 }
@@ -297,7 +402,6 @@ header {
 
 .pic-banner-item {
   float: left;
-  width: calc(50% - 10px);
   padding: 10px 0 0 10px;
 }
 
@@ -306,8 +410,40 @@ header {
   height: auto;
 }
 
+.ratio-1to1 {
+  width: calc(50% - 10px);
+}
+
+.ratio-1to2 {
+  width: calc((100% - 20px)/3);
+}
+
+.ratio-1to2:nth-child(4n+2), .ratio-1to2:nth-child(4n+3) {
+  width: calc((200% - 40px)/3);
+}
+
+.ratio-3 {
+  width: calc((100% - 90px)/3);
+}
+
 .footer {
   background-color: #7B858E;
+}
+
+.footer-inner {
+  margin-right: 40px;
+}
+
+.footer-inner:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.footer-part {
+  float: left;
+  min-height: 200px;
+  margin: 10px 0 10px 30px;
 }
 
 @media (max-width: 768px) {
@@ -409,6 +545,23 @@ header {
   }
   .lnb-list-bg {
     display: none;
+  }
+  .pic-banner-list {
+    margin: 0;
+  }
+  .pic-banner-item {
+    width: 100%;
+    padding: 0;
+  }
+  .pic-banner-item img {
+    width: 100%;
+    height: auto;
+  }
+  .ratio-1to1, .ratio-1to2 {
+    width: 100%;
+  }
+  .ratio-1to1:nth-child(4n+2), .ratio-1to1:nth-child(4n+3), .ratio-1to2:nth-child(4n+2), .ratio-1to2:nth-child(4n+3) {
+    width: 100%;
   }
 }
 

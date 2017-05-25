@@ -15,8 +15,12 @@ var buildSrc = 'front_src/dist';
 var concat = require('gulp-concat');
 // js파일 압축
 var uglify = require('gulp-uglify');
+var jsOrder = [devSrc + '/js/lib/jquery-3.1.1.min.js',
+                devSrc + '/js/lib/jssor.slider-23.1.6.mini.js',
+                devSrc + '/js/menu.js',
+                devSrc + '/js/jssor-slider.js'];
 gulp.task('js:build', function(){
-    return gulp.src(devPaths.js)
+    return gulp.src(jsOrder)
         .pipe(concat('all.js'))
         .pipe(gulp.dest(buildSrc + '/js'));
 });
@@ -50,6 +54,7 @@ var sassOrder = [devSrc + '/scss/reset.scss',
                 devSrc + '/scss/mixins.scss',
                 devSrc + '/scss/spsm_img.scss',
                 devSrc + '/scss/icons.scss',
+                devSrc + '/scss/jssor-slider.scss',
                 devSrc + '/scss/style.scss',
                 devSrc + '/scss/sp_img.scss'];
 var sass = require('gulp-sass');

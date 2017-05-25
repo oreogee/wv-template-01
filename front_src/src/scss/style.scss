@@ -7,6 +7,7 @@
     margin: -1px;
     overflow: hidden;
 }
+
 .mobile-only {
     display: none !important;
 }
@@ -36,7 +37,10 @@ h1 {
     margin: 5px 10px;
     line-height: 60px;
 }
-
+h2 {
+    text-align: center;
+    padding: 50px 0 30px;
+}
 section {
     border-bottom: 10px solid $wrapper-color;
     overflow: hidden;
@@ -69,13 +73,16 @@ header {
             font-size: 15px;
             line-height: 20px;
             color: $text-color;
-            -webkit-transition: color 1.5s;
-            transition: color 1.5s;
+            cursor: pointer;
+            &:hover {
+                color: $text-hover-color;
+                -webkit-transition: color 1.5s;
+                transition: color 1.5s;
+            }
             a {
-                color: #848b90;
+                color: $text-color;
                 &:hover {
                     color: $text-hover-color;
-                    cursor: pointer;
                     -webkit-transition: color 1.5s;
                     transition: color 1.5s;
                 }
@@ -149,7 +156,6 @@ header {
     }
     &-item {
         float: left;
-        width: calc(50% - 10px);
         padding: 10px 0 0 10px;
         img {
             width: 100%;
@@ -157,10 +163,37 @@ header {
         }
     }
 }
+.ratio {
+    &-1to1 {
+        width: calc(50% - 10px);
+    }
+    &-1to2 {
+        width: calc((100% - 20px)/3);
+        &:nth-child(4n+2),
+        &:nth-child(4n+3) {
+            width: calc((200% - 40px)/3);
+        }
+    }
+    &-3 {
+        width: calc((100% - 90px)/3);
+    }
+}
 .footer {
     background-color: $footer-color;
+    &-inner {
+        margin-right: 40px;
+        &:after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+    }
+    &-part {
+        float: left;
+        min-height: 200px;
+        margin: 10px 0 10px 30px;
+    }
 }
-
 
 @media (max-width: 768px) {
     .mobile-only {
@@ -266,6 +299,29 @@ header {
         }
         &-bg {
             display: none;
+        }
+    }
+    .pic-banner {
+        &-list {
+            margin: 0;
+        }
+        &-item {
+            width: 100%;
+            padding: 0;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .ratio {
+        &-1to1,
+        &-1to2 {
+            width: 100%;
+            &:nth-child(4n+2),
+            &:nth-child(4n+3) {
+                width: 100%;
+            }
         }
     }
 }
