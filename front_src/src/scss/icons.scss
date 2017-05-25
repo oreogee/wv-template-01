@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'basic_icons';
+  src:  url('../fonts/basic_icons.eot?diynci');
+  src:  url('../fonts/basic_icons.eot?diynci#iefix') format('embedded-opentype'),
+    url('../fonts/basic_icons.ttf?diynci') format('truetype'),
+    url('../fonts/basic_icons.woff?diynci') format('woff'),
+    url('../fonts/basic_icons.svg?diynci#basic_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'basic_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-office:before {
+  content: "\e903";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-mobile:before {
+  content: "\e958";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-exit:before {
+  content: "\ea0f";
+}
+.icon-radio-checked:before {
+  content: "\ea54";
+}
+.icon-radio-unchecked:before {
+  content: "\ea56";
+}
+.icon-bold:before {
+  content: "\ea62";
+}
+.icon-mail2:before {
+  content: "\ea84";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}

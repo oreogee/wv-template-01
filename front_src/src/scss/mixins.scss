@@ -1,0 +1,7 @@
+@mixin sp_img($sp_name) {
+    @include sprite($sp_name);
+    background-image: url("../img/sp_img.png");
+    background-repeat: no-repeat;
+    background-size: 129px auto;
+    -webkit-background-size: 129px auto;
+}

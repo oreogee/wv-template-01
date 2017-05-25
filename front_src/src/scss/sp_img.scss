@@ -1,0 +1,35 @@
+.sp {
+    &-logo {
+        display: inline-block;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &-logo:before {
+        display: block;
+        @include sp_img($logo);
+        content: '';
+    }
+}
+
+.icon {
+    &-menu {
+        padding: 0 15px;
+        color: $text-color;
+        font-size: 25px;
+        line-height: 60px;
+    }
+    &-bold,
+    &-mail2,
+    &-phone,
+    &-facebook,
+    &-instagram,
+    &-twitter,
+    &-office {
+        padding: 10px 0;
+        font-size: 20px;
+    }
+}
+.open.icon-menu:before {
+    content: "\ea0f";
+}
